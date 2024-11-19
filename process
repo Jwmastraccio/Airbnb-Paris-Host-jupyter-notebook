@@ -1,0 +1,62 @@
+Introduction to the Analysis
+
+In this project, I conducted an in-depth analysis of Airbnb listings in Paris to explore the impact of 2015 regulatory changes on the platform. The study focuses on three key areas:
+
+Pricing trends across neighborhoods and accommodation sizes.
+New host registration trends over time.
+The effect of the 2015 regulations on the number of new hosts and average listing prices.
+The analysis utilized advanced data manipulation and visualization techniques, creating actionable insights for Airbnb hosts and platform strategists. This detailed explanation highlights the methodology, insights, and conclusions.
+
+Analysis Process
+1. Data Exploration and Cleaning
+
+Objective: Understand the dataset and ensure quality for analysis.
+Steps Taken:
+Imported the dataset and inspected its structure using .head() and .info().
+Identified missing values, particularly in the host_since column (33 missing entries), and retained the dataset as it didn’t affect high-level trends.
+Filtered for Paris-specific listings using a query (city == 'Paris') and extracted relevant columns: host_since, neighbourhood, accommodates, and price.
+2. Summary Statistics and Data Validation
+
+Objective: Gain initial insights into price distributions and potential data quality issues.
+Steps Taken:
+Computed summary statistics to understand price ranges and accommodations.
+Detected and reviewed anomalous entries (e.g., listings with price == 0 and accommodates == 0), ensuring they were excluded from visualizations.
+3. Neighborhood Price Analysis
+
+Objective: Assess price disparities across neighborhoods to identify premium and budget-friendly areas.
+Steps Taken:
+Grouped listings by neighbourhood and calculated the mean price.
+Visualized the results using a horizontal bar chart, clearly showing price disparities.
+Key Insights:
+Premium neighborhoods like Elysee and Louvre commanded the highest prices, likely due to proximity to attractions and luxurious offerings.
+Budget-friendly neighborhoods catered to cost-conscious travelers, creating a diverse market segmentation.
+4. Price by Accommodation Capacity
+
+Objective: Understand how group size impacts pricing strategies.
+Steps Taken:
+Focused on listings in Elysee, the most expensive neighborhood, and analyzed average prices based on accommodation capacity.
+Grouped by accommodates and visualized using a bar chart.
+Key Insights:
+Listings with higher capacity (e.g., 3-4 beds) showed significantly higher prices, aligning with group travel demand.
+Smaller accommodations (1-2 beds) remained competitively priced, targeting solo travelers and couples.
+5. Trends Over Time
+
+Objective: Investigate how the number of new hosts and average prices evolved over time, particularly post-2015.
+Steps Taken:
+Resampled data by year (host_since) to calculate:
+The number of new hosts.
+The average price of listings.
+Created a dual-axis line chart showing new hosts (pink line) and average prices (secondary axis).
+Key Insights:
+New Hosts: A sharp decline in new hosts after 2015 indicates regulatory barriers limiting market entry.
+Average Prices: A concurrent rise in prices suggests reduced supply may have driven demand for remaining listings, increasing prices.
+
+Summary of Findings
+Impact of Neighborhood on Pricing
+
+High-demand neighborhoods like Elysee and Louvre cater to luxury travelers, commanding higher prices.
+Budget-conscious travelers gravitate toward more affordable neighborhoods, which offer a competitive edge.
+Accommodation Capacity and Pricing
+
+Listings for larger groups show varied pricing strategies, likely reflecting value-for-money considerations.
+Smaller accommodations dominate the budget traveler segment, showing consistent demand.
